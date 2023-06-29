@@ -1,0 +1,40 @@
+:root {
+  --foreground-clr: rgb(255, 255, 255);
+  --background-start-clr: rgb(20, 20, 20);
+  --background-end-clr: rgb(20, 20, 20);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-clr: rgb(0, 0, 0);
+    --background-start-clr: rgb(214, 219, 220);
+    --background-end-clr: rgb(255, 255, 255);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground-clr);
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--background-end-clr)
+    )
+    var(--background-start-clr);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
